@@ -12,11 +12,23 @@ import OutputConsole from './components/OutputConsole'
 import Header from './components/Header'
 
 
-const tempcode = `function add(a, b) {
-  return a + b;
-}`;
+const tempcode = 
+`# fib(n) recursively computes the n-th fibonacci number
+# fib: Nat -> Nat
+bind fib = lambda({n} -> 
+  if(<=(n 1)
+    n
+    +(
+      fib(-(n 1)) 
+      fib(-(n 2))));
 
-const tempout = 'Welcome to <Lang> Interpreter v0.1.'
+# function evaluation
+fib(0)
+fib(5)
+fib(10)`;
+
+const tempout = 
+`Welcome to <Lang> Interpreter v0.1.`
 
 
 class App extends React.Component {
@@ -25,6 +37,8 @@ class App extends React.Component {
   
   constructor(props) {
     super(props)
+
+    console.log(highlight(tempcode, languages.js))
 
     this.execute = this.execute.bind(this);
     this.reset = this.reset.bind(this); 
@@ -57,24 +71,28 @@ class App extends React.Component {
   render() {
     //console.log(highlight(this.state.code, languages.js));
     return (
-      <div className="container">
+      <div className="container full-height">
 
         <Header execute={this.execute} reset={this.reset} />
 
-        <div className="row">
-            <Editor 
-              className="col-sm-6 code-editor"
-              value={this.state.code}
-              onValueChange={code => this.setState({ code })}
-              highlight={code => highlight(code, languages.js)}
-              padding={10}
-              style={{
-                fontFamily: '"Fira code", "Fira Mono", monospace',
-                fontSize: 12,
-              }}
-            />
+        <div className="row fluid-height">
+          <div className="col-lg-6">
+            <div className="code-area">
+              <Editor 
+                className="code-editor"
+                value={this.state.code}
+                onValueChange={code => this.setState({ code })}
+                highlight={code => highlight(code, languages.js)}
+                padding={10}
+                style={{
+                  fontFamily: '"Fira code", "Fira Mono", monospace',
+                  fontSize: 12,
+                }}
+              />
+            </div>
+          </div>
 
-            <OutputConsole output={this.state.output}/>
+          <OutputConsole output={this.state.output}/>
             
         </div>
       </div>

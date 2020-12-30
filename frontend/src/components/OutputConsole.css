@@ -1,5 +1,14 @@
 .console-output {
 	font-family: Fira code, Fira Mono, monospace; 
+	font-size: 13px;
 	color: #eee;
+	margin-right: 0px;
+}
+
+.console-text {
 	background-color: #111;
+	padding: 20px;
+	margin: 10px;
+	height: 100%;
+	border-radius: 20px;
 }

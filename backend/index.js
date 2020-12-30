@@ -53,7 +53,7 @@ app.post('/api', cors(), (req, res) => {
 			// delete file
 			fs.unlink(env_path + filename, (err) => {
 				if (err) { console.log(err) }
-			})
+			});
 		});
 	});
 });

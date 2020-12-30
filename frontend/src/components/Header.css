@@ -1,25 +1,73 @@
 .header-area {
 	color: #eee;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .button {
-	padding-top: 10px;
-	padding-right: 20px;
-	padding-bottom: 10px;
-	padding-left: 20px;
+	font-family: 'IBM Plex Sans', monospace, sans-serif;
 
-	border-radius: 15px;
-	margin-left: 20px;
-	margin-right: 20px;
+	background-color: #3c3f42;
+	color: #eee;
+
+	padding-top: 10px;
+	padding-right: 27px;
+	padding-bottom: 12px;
+	padding-left: 17px;
+
+	border: none;
+	border-radius: 10px;
+
+	margin-left: 5px;
+	margin-right: 5px;
+
+	transition: background-color 0.3s;
+	-webkit-transition: background-color 0.3s;
 }
 
-.run {
-	color: #eee;
+.button img {
+	fill: #fff;
+}
+
+.button span {
+	font-size: 16px;
+	position: relative;
+	top: 1.5px;
+	right: -1px;
+	letter-spacing: 1px;
+}
+
+.button span a {
+	font-size: 16px;
+	position: relative;
+	top: 1.5px;
+	right: -1px;
+	letter-spacing: 1px;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:visited {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.run:hover {
 	background-color: #A6E22E;
 }
 
-.res {
-	color: #eee;
+.res:hover {
 	background-color: #FD971F;
+}
+
+.github:hover {
+	background-color: #AE81FF;
 }
