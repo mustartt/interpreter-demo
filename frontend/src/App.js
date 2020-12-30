@@ -4,6 +4,7 @@ import {highlight, languages} from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-python'
 
 import styles from './App.css'
 
@@ -18,18 +19,26 @@ const tempcode =
 bind fib = lambda({n} -> 
   if(<=(n 1)
     n
-    +(
-      fib(-(n 1)) 
-      fib(-(n 2))));
+    +(fib(-(n 1)) 
+      fib(-(n 2)))));
 
 # function evaluation
-fib(0)
-fib(5)
-fib(10)`;
+fib(0);
+fib(5);
+fib(10);`;
 
 const tempout = 
-`Welcome to <Lang> Interpreter v0.1.`
+`Welcome to The λ Interpreter [version 0.1].\nλ `
 
+
+function highcust(program) {
+  var temp = highlight(program, languages.python)
+  temp = temp.replace('bind', '<span class="token keyword">bind</span>')
+  temp = temp.replace('local', '<span class="token keyword">local</span>')
+  temp = temp.replace('load', '<span class="token keyword">load</span>')
+  temp = temp.replace('λ', '<span class="token keyword">λ</span>')
+  return temp
+}
 
 class App extends React.Component {
 
@@ -38,7 +47,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
 
-    console.log(highlight(tempcode, languages.js))
+    // console.log(highlight(tempcode))
 
     this.execute = this.execute.bind(this);
     this.reset = this.reset.bind(this); 
@@ -60,12 +69,13 @@ class App extends React.Component {
     .then((json) => {
       console.log("Program Output: " + (json.err ? "Failure" : "Success"))
       console.log(json.output)
-      this.setState({ code: this.state.code, output: json.output })
+      this.setState({ code: this.state.code, 
+        output: tempout + 'interperter input.lang\n' + json.output })
     })
   }
 
   reset() {
-    this.setState({ code: tempcode, output: this.state.output })
+    this.setState({ code: tempcode, output: tempout })
   }
 
   render() {
@@ -82,7 +92,7 @@ class App extends React.Component {
                 className="code-editor"
                 value={this.state.code}
                 onValueChange={code => this.setState({ code })}
-                highlight={code => highlight(code, languages.js)}
+                highlight={code => highcust(code)}
                 padding={10}
                 style={{
                   fontFamily: '"Fira code", "Fira Mono", monospace',
