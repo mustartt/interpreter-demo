@@ -1,22 +1,18 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var cors = require('cors')
 var fs = require('fs')
 var sys = require('child_process')
 
 // Express Application
 var app = express();
 
+// cors options
+app.options('/api', cors())
+
 // middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
-
-
-
-app.get('/', (req, res) => {
-	// TODO: Implement React Build File
-	res.send('Hello World!');
-});
-
 
 
 // custom functions
@@ -26,13 +22,13 @@ const env_path = './environment/'
 function getRandomName() {
     var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var result = '';
-    for ( var i = 0; i < 12; i++) {
+    for (var i = 0; i < 12; i++) {
         result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
     }
     return result;
 }
 
-app.post('/api', (req, res) => {
+app.post('/api', cors(), (req, res) => {
 	// get the body of the request
 	var code = req.body.code;
 	// generate random file name
@@ -47,11 +43,12 @@ app.post('/api', (req, res) => {
 		var command = 'environment\\interp.exe environment\\' + filename;
 		// execute interpreter command
 		sys.exec(command, (err, stdout, stderr) => {
-			if (err) { console.log() }
-			if (stderr) { console.log(stderr) }
-
 			// send result back
-			res.send(stdout);
+			if (stderr) {
+				res.json({output: stderr, err: true})
+			} else {
+				res.json({output: stdout, err: false});
+			}
 
 			// delete file
 			fs.unlink(env_path + filename, (err) => {

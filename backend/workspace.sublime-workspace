@@ -31,7 +31,7 @@
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1651,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -248,15 +248,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1651,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								371,
+								371
 							]
 						],
 						"settings":

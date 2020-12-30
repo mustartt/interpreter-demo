@@ -14,23 +14,52 @@ import Header from './components/Header'
 
 const tempcode = `function add(a, b) {
   return a + b;
-}
-`;
-
+}`;
 
 const tempout = 'Welcome to <Lang> Interpreter v0.1.'
 
 
- 
 class App extends React.Component {
+
   state = { code: tempcode, output: tempout };
- 
+  
+  constructor(props) {
+    super(props)
+
+    this.execute = this.execute.bind(this);
+    this.reset = this.reset.bind(this); 
+  }
+
+  execute() {
+    // send POST request
+    fetch('http://localhost:5000/api', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        code: this.state.code
+      })
+    })
+    .then((res) => res.json())
+    .then((json) => {
+      console.log("Program Output: " + (json.err ? "Failure" : "Success"))
+      console.log(json.output)
+      this.setState({ code: this.state.code, output: json.output })
+    })
+  }
+
+  reset() {
+    this.setState({ code: tempcode, output: this.state.output })
+  }
+
   render() {
     //console.log(highlight(this.state.code, languages.js));
     return (
       <div className="container">
 
-        <Header />
+        <Header execute={this.execute} reset={this.reset} />
 
         <div className="row">
             <Editor 
