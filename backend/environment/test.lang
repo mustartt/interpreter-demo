@@ -1,0 +1,9 @@
+# map(f lst) maps the function f to every element of lst
+# map: (X -> Y) (listof X) -> (listof Y)
+bind map to lambda({f lst} ->
+        if(empty?(lst)
+                list()
+                cons(f(car(lst))
+                        map(f cdr(lst)))));
+
+map(lambda({x} -> *(2 x)) list(1 2 3 4 5))

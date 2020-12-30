@@ -1,0 +1,358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"style"
+			],
+			[
+				"font-",
+				"font-family\tproperty"
+			],
+			[
+				"out",
+				"OutputConsole"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"class",
+				"className"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"naomi in",
+				"Naomi: Run syntax tests"
+			],
+			[
+				"install ",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/henry/source/interpreter-demo/src/index.js",
+		"/C/Users/henry/source/interpreter-demo/public/index.html",
+		"/C/Users/henry/source/interpreter-demo/src/components/Header.css",
+		"/C/Users/henry/source/interpreter-demo/src/components/Header.js",
+		"/C/Users/henry/source/interpreter-demo/src/components/OutputConsole.css",
+		"/C/Users/henry/source/interpreter-demo/src/App.css",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/interpreter/LexicalAnalyzer.py",
+		"/C/Users/henry/source/interpreter-demo/README.md",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/README.md",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/Makefile",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/lang/collections.lang",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/run_test.sh",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/tests/__init__.py",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/interpreter/__init__.py",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/lang/higher-order.lang",
+		"/C/Users/henry/Dropbox/School/projects/functional-interpreter/examples/performance/speed.lang",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/lang/higher-order.lang",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/test.lang",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/dist/examples/local.lang",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/dist/examples/factorial.lang",
+		"/C/Users/henry/Saved Games/Respawn/Apex/profile/profile.cfg",
+		"/C/Users/henry/Downloads/fix.dll",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/expression.test",
+		"/C/Users/henry/Dropbox/School/projects/interpreter/grammar.test",
+		"/C/Users/henry/Saved Games/Respawn/Apex/local/settings.cfg",
+		"/C/Users/henry/Documents/workspace/pixiv-bot/settings.cfg",
+		"/C/Users/henry/Dropbox/School/CS135/final/general.rkt",
+		"/C/Users/henry/Documents/workspace/pixiv-bot/run.sh",
+		"/C/Users/henry/Documents/workspace/pixiv-bot/requirements.txt",
+		"/D/Cyber Punk/Cyberpunk 2077/launcher-configuration.json",
+		"/C/Users/henry/Downloads/shortans.rkt",
+		"/C/Users/henry/Documents/Python Testing/apex_login.txt",
+		"/C/Users/henry/Documents/Python Testing/download.py",
+		"/C/Users/henry/Documents/workspace/pixiv-bot/test_output.txt",
+		"/C/Users/henry/Dropbox/School/CS135/final/acadinteg.txt",
+		"/C/Users/henry/Documents/workspace/pixiv-bot/details.conf",
+		"/C/Users/henry/Downloads/FE/FE_Q3.tex",
+		"/C/Users/henry/Downloads/FE/FE_Q4.tex",
+		"/C/Users/henry/Downloads/FE/FE_Q2.tex",
+		"/C/Users/henry/Dropbox/School/CS135/A09/change.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A09/htmlagain.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A09/recipe-needed.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A07/guess.rkt",
+		"/C/Users/henry/Documents/Python Testing/ocr testing/convert.py",
+		"/C/Users/henry/Dropbox/School/CS135/A09/brackets.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A10/zombies.rkt",
+		"/C/Users/henry/Documents/Python Testing/Discord Bot/mrisa-master/src/googlecloudapi.py",
+		"/C/Users/henry/Documents/Python Testing/Discord Bot/mrisa-master/src/__init__.py",
+		"/C/Users/henry/.idlerc/config-highlight.cfg",
+		"/C/Users/henry/Dropbox/School/MATH135/python_package/LICENSE",
+		"/C/Users/henry/Dropbox/School/MATH135/python_package/README.md",
+		"/C/Users/henry/Saved Games/Respawn/Apex/local/videoconfig.txt",
+		"/E/Steam_Library/steamapps/common/Apex Legends/cfg/autoexec.cfg",
+		"/C/Users/henry/Documents/Python Testing/lmao/assignment10.py",
+		"/C/Users/henry/Documents/Python Testing/lmao/pet_data.csv",
+		"/C/Users/henry/Documents/Python Testing/lmao/date.py",
+		"/C/Users/henry/Documents/Python Testing/lmao/pet.py",
+		"/C/Users/henry/Dropbox/School/CS135/A09/change-wrong.txt",
+		"/C/Users/henry/Dropbox/School/CS135/python/numbers_small.txt",
+		"/C/Users/henry/Dropbox/School/Homework/test/query.py",
+		"/C/Users/henry/Dropbox/School/CS135/A07/super.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 2/cipher.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 2/relative.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A07/test.lisp",
+		"/C/Users/henry/Dropbox/School/CS135/A07/console_out.txt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 2/mt2-reference.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 2/mt2-shortans.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A06/html.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A06/roster.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A05/groceries.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A05/sillystring.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A05/not-lists.rkt",
+		"/C/Users/henry/Downloads/roster (1).rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A04/recognize.rkt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/movement_40.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/movement_60.cfg",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 1/duck.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A04/test.py",
+		"/C/Users/henry/Dropbox/School/CS135/A04/templates.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A04/temp.txt",
+		"/C/Users/henry/Downloads/dz60_layout_mine.json",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 1/cold.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 1/fact.rkt",
+		"/C/Users/henry/Dropbox/mid (1)/duck.rkt",
+		"/C/Users/henry/Dropbox/mid (1)/wild.rkt",
+		"/C/Users/henry/Dropbox/mid (1)/soft.bak",
+		"/C/Users/henry/Dropbox/mid (1)/cold.rkt",
+		"/C/Users/henry/Dropbox/mid (1)/rrrr.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A03/vowels.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/Midterm 1/acadinteg.txt",
+		"/C/Users/henry/Dropbox/mid/fact.rkt",
+		"/C/Users/henry/Dropbox/mid/duck.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A03/warmup.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A03/relative.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/valid-date-bool.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/valid-date.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/crl-points.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/sequences.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/translations.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A01/valid-date-cond.rkt",
+		"/C/Users/henry/Dropbox/School/CS135/A02/pos.rkt",
+		"/C/Users/henry/Documents/School/CS135/A00/acadinteg.txt",
+		"/C/Users/henry/Documents/School/CS135/A00/secret.txt",
+		"/C/Users/henry/Documents/School/CS135/A00/function.rkt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/csgoconfig.cfg",
+		"/C/Users/henry/Downloads/csgoconfig.cfg",
+		"/C/Program Files (x86)/Steam/userdata/305901637/730/local/cfg/trustedlaunch.cfg",
+		"/C/Program Files (x86)/Steam/userdata/305901637/730/local/cfg/xhair3_backup.cfg",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/jump.cfg",
+		"/C/Program Files (x86)/Steam/userdata/380605367/730/remote/cfg/config.cfg",
+		"/C/Users/henry/Documents/modified-testing2.ps1",
+		"/C/Users/henry/Documents/d1solo.ps1",
+		"/C/Users/henry/Downloads/fuckschool.txt",
+		"/C/Users/henry/AppData/Local/Temp/scp36466/arkse/ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini",
+		"/C/Users/henry/AppData/Local/Temp/scp38221/arkse/ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini",
+		"/C/Users/henry/AppData/Local/Temp/scp38847/arkse/ShooterGame/Saved/Config/WindowsServer/Game.ini",
+		"/C/Users/henry/AppData/Local/Temp/scp38270/arkse/ShooterGame/Saved/Config/WindowsServer/Engine.ini",
+		"/C/Users/henry/AppData/Local/Temp/scp00205/arkse/ShooterGame/Saved/Config/WindowsServer/Game.ini",
+		"/C/Users/henry/AppData/Local/Temp/scp00898/arkse/ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/practice.cfg",
+		"/C/Users/henry/AppData/Local/Temp/scp10222/home/ark/server/minecraft/factions/plugins/BungeePerms/permissions.yml",
+		"/C/Users/henry/AppData/Local/Temp/scp11534/home/ark/server/minecraft/thepit/plugins/BungeePerms/permissions.yml",
+		"/C/Users/henry/AppData/Local/Temp/scp54341/home/ark/server/minecraft/factions/start.sh",
+		"/C/Users/henry/AppData/Local/Temp/scp56414/home/ark/server/minecraft/hub/plugins/DeluxeHub/config.yml",
+		"/C/Users/henry/AppData/Local/Temp/scp53392/home/ark/server/minecraft/factions/server.properties",
+		"/C/Users/henry/Downloads/export.htlm",
+		"/C/Users/henry/Downloads/Project-X/project/parts.txt",
+		"/E/LCSC_BOM.xlsx"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Naomi/syntaxes/naomi.fjsx15.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "workspace.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 298.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
