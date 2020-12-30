@@ -7,22 +7,31 @@ import 'prismjs/components/prism-markup';
 
 import styles from './App.css'
 
-
+// Import Components
 import OutputConsole from './components/OutputConsole'
+import Header from './components/Header'
+
 
 const tempcode = `function add(a, b) {
   return a + b;
 }
 `;
+
+
+const tempout = 'Welcome to <Lang> Interpreter v0.1.'
+
+
  
 class App extends React.Component {
-  state = { code: tempcode };
+  state = { code: tempcode, output: tempout };
  
   render() {
     //console.log(highlight(this.state.code, languages.js));
     return (
-
       <div className="container">
+
+        <Header />
+
         <div className="row">
             <Editor 
               className="col-sm-6 code-editor"
@@ -36,7 +45,7 @@ class App extends React.Component {
               }}
             />
 
-            <OutputConsole />
+            <OutputConsole output={this.state.output}/>
             
         </div>
       </div>

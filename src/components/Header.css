@@ -1,0 +1,25 @@
+.header-area {
+	color: #eee;
+	text-align: center;
+}
+
+.button {
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+
+	border-radius: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.run {
+	color: #eee;
+	background-color: #A6E22E;
+}
+
+.res {
+	color: #eee;
+	background-color: #FD971F;
+}
