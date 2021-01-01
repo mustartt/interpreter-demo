@@ -1,11 +1,22 @@
-var express = require('express')
-var bodyParser = require('body-parser')
-var cors = require('cors')
-var fs = require('fs')
-var sys = require('child_process')
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const fs = require('fs')
+const sys = require('child_process')
+const http = require('http')
 
 // Express Application
 var app = express();
+
+// Setup Socket Connections
+const server = http.createServer(app)
+const socketIo = require('socket.io')
+const io = socketIo(server, {
+	cors: {
+    	origin: "http://localhost:3000",
+    	methods: ["GET", "POST"]
+    }
+  })
 
 // cors options
 app.options('/api', cors())
@@ -14,6 +25,27 @@ app.options('/api', cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
+
+/* === Interactive REPL Handler === */
+// app.use('/static', express.static('node_modules'));
+
+io.on('connection', (socket) => {
+	console.log('Established a connection.')
+
+	socket.emit('msg_repl', 'Welcome to interpreter! \n> ');
+
+	socket.on('msg_client', (data) => {
+		// echo back the command
+		socket.emit('msg_repl', data + '\n> ')
+	});
+
+	socket.on('disconnect', () => {
+		console.log('Client disconnected.')
+	});
+})
+
+
+/* === File Execution Handler === */
 
 // custom functions
 const env_path = './environment/'
@@ -67,3 +99,9 @@ app.get('*', function(req, res){
 app.listen(5000, () =>
   console.log('Example app listening on port 5000.'),
 );
+
+server.listen(5001, () => {
+	console.log('socket is listening on port 5001.')
+});
+
+
