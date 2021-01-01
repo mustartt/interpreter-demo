@@ -5,6 +5,8 @@ const fs = require('fs')
 const cp = require('child_process')
 const http = require('http')
 
+const PORT = process.env.PORT || 5000;
+
 // Express Application
 var app = express();
 
@@ -119,12 +121,8 @@ app.get('*', function(req, res){
   res.status(404);
 });
 
-app.listen(5000, () =>
-  console.log('Example app listening on port 5000.'),
-);
-
-server.listen(5001, () => {
-	console.log('socket is listening on port 5001.')
+server.listen(PORT, () => {
+	console.log('socket is listening on port ' + PORT)
 });
 
 

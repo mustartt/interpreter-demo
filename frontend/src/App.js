@@ -14,7 +14,7 @@ import Header from './components/Header'
 import REPL from './components/REPL'
 
 import socketIOClient from "socket.io-client";
-const ENDPOINT = "http://localhost:5001";
+const ENDPOINT = "http://interpreter-demo.herokuapp.com/";
 
 const tempcode = 
 `# fib(n) recursively computes the n-th fibonacci number
@@ -96,7 +96,7 @@ class App extends React.Component {
     this.changeToOutput()
 
     // send POST request
-    fetch('http://localhost:5000/api', {
+    fetch('http://interpreter-demo.herokuapp.com/api', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
