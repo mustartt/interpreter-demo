@@ -16,8 +16,6 @@ import REPL from './components/REPL'
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "http://localhost:5001";
 
-
-
 const tempcode = 
 `# fib(n) recursively computes the n-th fibonacci number
 # fib: Nat -> Nat

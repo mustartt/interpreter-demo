@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const fs = require('fs')
-const sys = require('child_process')
+const cp = require('child_process')
 const http = require('http')
 
 // Express Application
@@ -13,7 +13,7 @@ const server = http.createServer(app)
 const socketIo = require('socket.io')
 const io = socketIo(server, {
 	cors: {
-    	origin: "http://localhost:3000",
+    	origin: "*",
     	methods: ["GET", "POST"]
     }
   })
@@ -25,22 +25,45 @@ app.options('/api', cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
-
 /* === Interactive REPL Handler === */
 // app.use('/static', express.static('node_modules'));
 
 io.on('connection', (socket) => {
-	console.log('Established a connection.')
+	console.log('Established a connection. Spawning DEBUG interpreter.')
 
-	socket.emit('msg_repl', 'Welcome to interpreter! \n> ');
+	// spawn sync
+	interp = cp.spawn('python', ['test.py'])
 
+	/* Forward interpreter output to client*/
+	interp.stdout.on('data', (data) => {
+		//console.log(data.toString())
+		socket.emit('msg_repl', data.toString());
+	});
+
+	interp.stderr.on('data', (data) => {
+		//console.log(data.toString())
+		socket.emit('msg_repl', data.toString());
+	});
+
+	// send client command to interpreter 
 	socket.on('msg_client', (data) => {
-		// echo back the command
-		socket.emit('msg_repl', data + '\n> ')
+		console.log("Client sent " + data)
+		interp.stdin.write(data + '\n')
+		// the output should be piped to stdout or stderr
+	});
+
+	/* Handle closing events */
+	interp.on('close', (code) => {
+	  socket.emit('msg_repl', `The interpreter exited with code ${code}.`);
+	});
+
+	interp.on('error', (err) => {
+	   socket.emit('msg_repl', "Error" + err );
 	});
 
 	socket.on('disconnect', () => {
-		console.log('Client disconnected.')
+		console.log('Client disconnected killing child child process.')
+		interp.kill()
 	});
 })
 
@@ -74,7 +97,7 @@ app.post('/api', cors(), (req, res) => {
 		// TODO: Fix the subdir problem
 		var command = 'environment\\interp.exe environment\\' + filename;
 		// execute interpreter command
-		sys.exec(command, (err, stdout, stderr) => {
+		cp.exec(command, (err, stdout, stderr) => {
 			// send result back
 			if (stderr) {
 				res.json({output: stderr, err: true})

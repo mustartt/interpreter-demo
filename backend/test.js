@@ -4,11 +4,11 @@ var proc = cp.spawn('python', ['test.py']);
 
 
 proc.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
+  console.log(data.toString());
 });
 
 proc.stderr.on('data', (data) => {
-  console.error(`stderr: ${data}`);
+  console.error(data.toString());
 });
 
 proc.on('close', (code) => {
@@ -16,9 +16,8 @@ proc.on('close', (code) => {
 });
 
 proc.on('error', (err) => {
-   console.log("Error" + err );
+   console.log("Error" + err);
 });
-
 
 
 // write to 
