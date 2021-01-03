@@ -87,7 +87,7 @@ class App extends React.Component {
       return
     }
 
-    this.setState({response: this.state.response + ' ' + command})
+    this.setState({response: this.state.response + command})
     this.socket.emit('msg_client', command)
   }
   
