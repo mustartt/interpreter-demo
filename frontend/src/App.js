@@ -17,7 +17,10 @@ import socketIOClient from "socket.io-client";
 const ENDPOINT = "https://interpreter-demo.herokuapp.com/";
 
 const tempcode = 
-`# fib(n) recursively computes the n-th fibonacci number
+`
+load lang/higher-order.lang;
+
+# fib(n) recursively computes the n-th fibonacci number
 # fib: Nat -> Nat
 bind fib = lambda({n} -> 
   if(<=(n 1)
@@ -26,9 +29,11 @@ bind fib = lambda({n} ->
       fib(-(n 2)))));
 
 # function evaluation
-fib(0);
-fib(5);
-fib(10);`;
+fib(10);
+
+# example for higher-order functions
+reduce(+ 0 map(fib list(1 2 3 4 5 6 7 8 9 10)));
+`;
 
 const tempout = 
 `Welcome to The λ Interpreter [version 0.1].\nλ `
